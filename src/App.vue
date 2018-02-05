@@ -29,31 +29,38 @@
   </div>
 </template>
 
+// scoped
+<style lang="scss" >
 
-<style lang="scss" type="text/scss">
-
+  @import 'assets/scss/emoji-sprite.scss';
+  @import 'assets/scss/font-define.scss';
   * {
     box-sizing:border-box;
   }
 
-  .header{
+  #app .header{
       margin:0 auto;
-      padding:0px 200px;
-      padding-top:30px;
-      height:252px;
+      padding:0px 160px;
+      padding-top:25px;
+      height:200px;
       .title{
-        font-size:81px;
+          font-family: wyjzfs;
+          line-height: 101px;
+          font-size: 81px;
+          font-weight: bold;
         span{
+          font-weight: normal;
           color:rgba(128, 128, 128, 0.904);
         }
       }
       .welcome{
+        font-family: hylmt;
         font-size:20px;
         color:rgba(143, 136, 136, 0.281);
       }
   }
 
-  .main{
+  #app .main{
     margin:0 auto;
     .nav-content{
         height:70px;
@@ -67,8 +74,9 @@
             .nav-item{
               display: inline-block;
               height:100%;
+              min-width: 75px;
+              text-align: center;
               text-decoration: none;
-              // margin-left:62px;
               padding:0px 20px;
               color:#fff;
               font-size:18px;
@@ -78,6 +86,7 @@
             }
             .nav-item.active{
               background: url('assets/shape.png') no-repeat 3px 3px;
+              font-size: 12px;
               color:#607182;
               position: relative;
               // left: -20px;
@@ -100,10 +109,7 @@
     }
 
   }
-
-
 </style>
-
 
 
 <script>
